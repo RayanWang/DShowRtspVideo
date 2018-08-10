@@ -1,0 +1,11 @@
+;
+LIBRARY		DeltaVideoProcesser.ax
+DESCRIPTION	'Delta Video Processer'
+
+EXPORTS
+
+DllMain					PRIVATE
+DllGetClassObject		PRIVATE
+DllCanUnloadNow			PRIVATE
+DllRegisterServer		PRIVATE
+DllUnregisterServer		PRIVATE

@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {8EA1761B-9E81-4643-B110-DA8C1A78EF0B} = s 'GraphAPI Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{DD45C9C1-6E0A-411E-8A9F-875AE6DAB87A}'
+			Version = s '1.0'
+		}
+	}
+}

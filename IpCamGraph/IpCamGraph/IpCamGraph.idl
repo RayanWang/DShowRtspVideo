@@ -1,0 +1,64 @@
+/*
+ * Delta CONFIDENTIAL
+ *
+ * (C) Copyright Delta Electronics, Inc. 2014 All Rights Reserved
+ *
+ * NOTICE:  All information contained herein is, and remains the
+ * property of Delta Electronics. The intellectual and technical
+ * concepts contained herein are proprietary to Delta Electronics
+ * and are protected by trade secret, patent law or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Delta Electronics.
+ */
+
+// IpCamGraph.idl : IpCamGraph 的 IDL 來源
+//
+
+// 這個檔案會由 MIDL 工具處理
+// 以產生型別程式庫 (IpCamGraph.tlb) 和封送處理程式碼。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(4578E130-06F8-4D64-823F-708743C0C24A),
+	oleautomation,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IGraphAPI : IUnknown
+{
+	[id(1), helpstring("method Initialize")] HRESULT Initialize(void);
+	[id(2), helpstring("method CreateGraph")] HRESULT CreateGraph([in] BOOL bIsRender, [in] BSTR bstrRtspUrl, [in] int nColorSpace);
+	[id(3), helpstring("method SetDisplayWindow")] HRESULT SetDisplayWindow([in] LONG_PTR lWindow);
+	[id(4), helpstring("method SetNotifyWindow")] HRESULT SetNotifyWindow([in] LONG_PTR lWindow);
+	[id(5), helpstring("method HandleEvent")] HRESULT HandleEvent([in] UINT_PTR inWParam, [in] LONG_PTR inLParam);
+	[id(6)] HRESULT Run(void);
+	[id(7)] HRESULT Stop(void);
+	[id(8)] HRESULT Pause(void);
+	[id(9), helpstring("method InitCalibrate")] HRESULT InitCalibrate([in] BOOL bIsStandardCamera);
+	[id(10), helpstring("method EnableCalibrate")] HRESULT EnableCalibrate([in] BOOL bEnable);
+	[id(11), helpstring("method EnableDemodulate")] HRESULT EnableDemodulate([in] BOOL bEnable);
+	[id(12), helpstring("method UnInitialize")] HRESULT UnInitialize(void);
+	[id(13), helpstring("method DestroyGraph")] HRESULT DestroyGraph(void);
+	[id(14), helpstring("method EnableGPUCompute")] HRESULT EnableGPUCompute([in] BOOL bEnable);
+	[id(15), helpstring("method SnapShot")] HRESULT SnapShot([in] BSTR bstrImgPath);
+};
+[
+	uuid(DD45C9C1-6E0A-411E-8A9F-875AE6DAB87A),
+	version(1.0),
+]
+library IpCamGraphLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(8EA1761B-9E81-4643-B110-DA8C1A78EF0B)		
+	]
+	coclass GraphAPI
+	{
+		[default] interface IGraphAPI;
+	};
+};
+

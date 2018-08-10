@@ -1,0 +1,15 @@
+#pragma once
+
+#define DELTA_CUDA_VERSION_MAJOR 0
+#define DELTA_CUDA_VERSION_MINOR 1
+
+#define DELTA_CUDA "Delta Cuda Video Decoder"
+
+/////////////////////////////////////////////////////////
+#define DO_MAKE_STR(x) #x
+#define MAKE_STR(x) DO_MAKE_STR(x)
+
+#define DELTA_CUDA_VERSION DELTA_CUDA_VERSION_MAJOR.DELTA_CUDA_VERSION_MINOR
+#define DELTA_CUDA_VERSION_TAG DELTA_CUDA_VERSION_MAJOR, DELTA_CUDA_VERSION_MINOR
+
+#define DELTA_CUDA_VERSION_STR MAKE_STR(DELTA_CUDA_VERSION)

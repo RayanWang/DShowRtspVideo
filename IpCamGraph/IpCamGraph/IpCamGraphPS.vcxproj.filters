@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="原始程式檔">
+      <UniqueIdentifier>{89c62893-7f4e-4803-9f9a-9086885fe93a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="產生的檔案">
+      <UniqueIdentifier>{b2635a6e-37fc-4f55-ac09-432e2f208e73}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IpCamGraphps.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IpCamGraph_i.c">
+      <Filter>產生的檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="IpCamGraph_p.c">
+      <Filter>產生的檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="dlldata.c">
+      <Filter>產生的檔案</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+;
+LIBRARY		DeltaCudaH264Decoder.ax
+DESCRIPTION	'Delta Cuda H264 Decoder'
+
+EXPORTS
+
+DllMain					PRIVATE
+DllGetClassObject		PRIVATE
+DllCanUnloadNow			PRIVATE
+DllRegisterServer		PRIVATE
+DllUnregisterServer		PRIVATE

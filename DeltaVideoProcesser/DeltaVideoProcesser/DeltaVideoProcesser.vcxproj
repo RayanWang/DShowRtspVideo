@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9748EE27-7D95-42EE-9940-91871E1311D2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DeltaVideoProcesser</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files\Microsoft SDKs\Windows\v7.1\Samples\multimedia\directshow\baseclasses;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Microsoft SDKs\Windows\v7.1\Lib;$(LibraryPath)</LibraryPath>
+    <TargetExt>.ax</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files\Microsoft SDKs\Windows\v7.1\Samples\multimedia\directshow\baseclasses;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\Microsoft SDKs\Windows\v7.1\Lib;$(LibraryPath)</LibraryPath>
+    <TargetExt>.ax</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DELTAVIDEOPROCESSER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\Include;..\..\opencv\build\include;..\..\opencv\build\include\opencv;..\..\opencv\build\include\opencv2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName).ax</OutputFile>
+      <AdditionalDependencies>strmbasd.lib;winmm.lib;quartz.lib;vfw32.lib;comctl32.lib;Ws2_32.lib;Mswsock.lib;AdvApi32.lib;zlibd.lib;opencv_core249d.lib;opencv_features2d249d.lib;opencv_highgui249d.lib;opencv_calib3d249d.lib;opencv_ml249d.lib;opencv_ocl249d.lib;opencv_objdetect249d.lib;opencv_nonfree249d.lib;opencv_flann249d.lib;opencv_imgproc249d.lib;IlmImfd.lib;libjasperd.lib;libjpegd.lib;libpngd.lib;libtiffd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>DeltaVideoProcesser.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\..\opencv\build\x86\vc11\staticlib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DELTAVIDEOPROCESSER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\Include;..\..\opencv\build\include;..\..\opencv\build\include\opencv;..\..\opencv\build\include\opencv2;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>DeltaVideoProcesser.def</ModuleDefinitionFile>
+      <OutputFile>$(OutDir)$(TargetName).ax</OutputFile>
+      <AdditionalDependencies>strmbase.lib;winmm.lib;quartz.lib;vfw32.lib;comctl32.lib;Ws2_32.lib;Mswsock.lib;AdvApi32.lib;zlib.lib;opencv_core249.lib;opencv_highgui249.lib;opencv_imgproc249.lib;opencv_features2d249.lib;opencv_calib3d249.lib;opencv_ml249.lib;opencv_ocl249.lib;opencv_objdetect249.lib;opencv_nonfree249.lib;opencv_flann249.lib;libpng.lib;libtiff.lib;IlmImf.lib;libjasper.lib;libjpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\opencv\build\x86\vc11\staticlib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="DeltaVideoProcesser.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Calibration.h" />
+    <ClInclude Include="ColorChartDetection.h" />
+    <ClInclude Include="ColorGenerate.h" />
+    <ClInclude Include="ColorSpace.h" />
+    <ClInclude Include="ColorSpaceHSL.h" />
+    <ClInclude Include="DeltaVideoProcesser.h" />
+    <ClInclude Include="Helper.h" />
+    <ClInclude Include="ColorSpaceLab.h" />
+    <ClInclude Include="CurveFitting.h" />
+    <ClInclude Include="ParamDef.h" />
+    <ClInclude Include="ColorReflection.h" />
+    <ClInclude Include="ColorSpaceRGB.h" />
+    <ClInclude Include="ColorSpaceRGB2XYZ.h" />
+    <ClInclude Include="ColorSpaceXYZ.h" />
+    <ClInclude Include="Regression.h" />
+    <ClInclude Include="RegressionElmLinear.h" />
+    <ClInclude Include="RegressionGenerate.h" />
+    <ClInclude Include="RegressionLeastSquare.h" />
+    <ClInclude Include="RegressionReflection.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Calibration.cpp" />
+    <ClCompile Include="ColorChartDetection.cpp" />
+    <ClCompile Include="ColorGenerate.cpp" />
+    <ClCompile Include="ColorSpace.cpp" />
+    <ClCompile Include="ColorSpaceHSL.cpp" />
+    <ClCompile Include="DeltaVideoProcesser.cpp" />
+    <ClCompile Include="ColorSpaceLab.cpp" />
+    <ClCompile Include="CurveFitting.cpp" />
+    <ClCompile Include="ColorSpaceRGB.cpp" />
+    <ClCompile Include="ColorSpaceRGB2XYZ.cpp" />
+    <ClCompile Include="ColorSpaceXYZ.cpp" />
+    <ClCompile Include="Regression.cpp" />
+    <ClCompile Include="RegressionElmLinear.cpp" />
+    <ClCompile Include="RegressionGenerate.cpp" />
+    <ClCompile Include="RegressionLeastSquare.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DeltaVideoProcesser.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

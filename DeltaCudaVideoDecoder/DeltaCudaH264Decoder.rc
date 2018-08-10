@@ -1,0 +1,176 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文 (繁體，台灣) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040404b0"
+        BEGIN
+            VALUE "CompanyName", "Delta Electronics, Inc."
+            VALUE "FileDescription", "Delta directshow cuda video decode filter"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "DeltaCudaH264Decoder.ax"
+            VALUE "LegalCopyright", "(c) Delta Electronics, Inc.  著作權所有，並保留一切權利。"
+            VALUE "OriginalFilename", "DeltaCudaH264Decoder.ax"
+            VALUE "ProductName", "Delta directshow cuda video decode filter"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 1200
+    END
+END
+
+#endif    // 中文 (繁體，台灣) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英文 (美國) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""DeltaCudaH264Decoder.rc2"" // non-Microsoft Visual C++ edited resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_DELTACUDA_SETTINGS DIALOGEX 0, 0, 171, 111
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "Deinterlacing",IDC_DEINTERLACE_GROUP,7,8,78,54
+    CONTROL         "None (Weave)",IDC_DEINT_WEAVE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,14,20,63,10
+    CONTROL         "Bob",IDC_DEINT_BOB,"Button",BS_AUTORADIOBUTTON,14,33,28,10
+    CONTROL         "Adaptive",IDC_DEINT_ADAPTIVE,"Button",BS_AUTORADIOBUTTON,14,46,45,10
+    CONTROL         "25p/30p",IDC_DEINT_FPS_HALF,"Button",BS_AUTORADIOBUTTON | WS_GROUP,93,26,62,10
+    CONTROL         "50p/60p",IDC_DEINT_FPS_FULL,"Button",BS_AUTORADIOBUTTON,93,41,67,10
+    GROUPBOX        "Settings",IDC_SETTINGS,7,63,153,43
+    CONTROL         "Use Stream Aspect Ratio",IDC_STREAMAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,76,99,10
+    CONTROL         "Use HQ DXVA processing",IDC_DXVA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,90,93,10
+    GROUPBOX        "Frame Rate",IDC_STATIC,88,8,72,54
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PROPPAGE_DELTACUDA_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_SETTINGS            "Settings"
+    IDS_FIELDORDER_AUTO     "Auto"
+    IDS_FIELDORDER_TOP      "Top-Field First"
+    IDS_FIELDORDER_BOTTOM   "Bottom-Field First"
+    IDS_OUTPUT_AUTO         "Auto"
+    IDS_OUTPUT_NV12         "NV12"
+    IDS_OUTPUT_YV12         "YV12"
+END
+
+#endif    // 英文 (美國) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#include "DeltaCudaH264Decoder.rc2" // non-Microsoft Visual C++ edited resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

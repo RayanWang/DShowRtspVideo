@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IpCamGraph", "IpCamGraph\IpCamGraph.vcxproj", "{3703DE10-7D0D-4320-9BF1-27CF41F7171D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IpCamGraphPS", "IpCamGraph\IpCamGraphPS.vcxproj", "{57DAE6BF-EAA9-4BDA-9317-395DBEF48429}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3703DE10-7D0D-4320-9BF1-27CF41F7171D} = {3703DE10-7D0D-4320-9BF1-27CF41F7171D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3703DE10-7D0D-4320-9BF1-27CF41F7171D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3703DE10-7D0D-4320-9BF1-27CF41F7171D}.Debug|Win32.Build.0 = Debug|Win32
+		{3703DE10-7D0D-4320-9BF1-27CF41F7171D}.Release|Win32.ActiveCfg = Release|Win32
+		{3703DE10-7D0D-4320-9BF1-27CF41F7171D}.Release|Win32.Build.0 = Release|Win32
+		{57DAE6BF-EAA9-4BDA-9317-395DBEF48429}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57DAE6BF-EAA9-4BDA-9317-395DBEF48429}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
