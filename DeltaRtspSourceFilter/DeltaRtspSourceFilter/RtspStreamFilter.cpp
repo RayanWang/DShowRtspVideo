@@ -17,7 +17,7 @@
 #include "RtspStreamFilter.h"
 #include "RtspStreamProp.h"
 
-#define STANDARD_CAMERA		L"rtsp://Admin:123456@172.16.8.82:7070/stream1"
+#define STANDARD_CAMERA		L"rtsp://Admin:123456@localhost:7070/stream1"
 
 #pragma warning(disable:4710)  // 'function': function not inlined (optimzation)
 
